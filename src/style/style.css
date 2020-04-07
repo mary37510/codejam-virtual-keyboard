@@ -13,12 +13,16 @@ body {
 }
 
 .keyboard_textarea {
+    border-top-left-radius: 5px; 
+    border-top-right-radius: 5px;
+    background: rgb(212, 211, 211);
     display: block;
     width: 90%;
     resize: none;
     margin: 0 auto;
     border: none;
     padding-bottom: 10px;
+    color: rgb(255, 255, 255);
 }
 
 .keyboard {
@@ -26,10 +30,11 @@ body {
     width: 90%;
     padding: 5px 0;
     background: #ddc4dd;
+    border-bottom-left-radius: 5px; 
+    border-bottom-right-radius: 5px;
     user-select: none;
     transition: bottom 0.8s;
 }
-
 
 .keyboard__keys {
     text-align: center;

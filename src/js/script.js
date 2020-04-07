@@ -130,32 +130,17 @@ const KEYBOARD = {
           keyElement.classList.add('keyboard__key_special');
           keyElement.innerHTML = ('<p>Ctrl</p>');
 
-          keyElement.addEventListener('click', () => {
-            this.properties.value += '→';
-            this.triggerEvent('oninput');
-          });
-
           break;
 
         case 'alt':
           keyElement.classList.add('keyboard__key_special');
           keyElement.innerHTML = ('<p>Alt</p>');
 
-          keyElement.addEventListener('click', () => {
-            this.properties.value += '→';
-            this.triggerEvent('oninput');
-          });
-
           break;
 
         case 'shift':
           keyElement.classList.add('keyboard__key_special');
           keyElement.innerHTML = ('<p>Shift</p>');
-
-          keyElement.addEventListener('click', () => {
-            this.properties.value += '→';
-            this.triggerEvent('oninput');
-          });
 
           break;
 

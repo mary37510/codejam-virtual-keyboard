@@ -1,0 +1,55 @@
+{
+  "name": "script.js",
+  "version": "1.0.0",
+  "description": "RSS task",
+  "main": "index.js",
+  "dependencies": {
+    "babel-code-frame": "^6.26.0",
+    "es-to-primitive": "^1.2.1",
+    "eslint-config-airbnb": "^18.1.0",
+    "exit-hook": "^1.1.1",
+    "ext": "^1.4.0",
+    "function-bind": "^1.1.1",
+    "generate-function": "^2.3.1",
+    "generate-object-property": "^1.2.0",
+    "graceful-fs": "^4.2.3",
+    "has": "^1.0.3",
+    "has-ansi": "^2.0.0",
+    "has-symbols": "^1.0.1",
+    "interpret": "^1.2.0",
+    "is-callable": "^1.1.5",
+    "is-date-object": "^1.0.2",
+    "is-my-ip-valid": "^1.0.0",
+    "is-property": "^1.0.2",
+    "is-regex": "^1.0.5",
+    "is-resolvable": "^1.1.0",
+    "is-symbol": "^1.0.3",
+    "isarray": "^1.0.0",
+    "json-stable-stringify": "^1.0.1",
+    "jsonify": "^0.0.0",
+    "jsonpointer": "^4.0.1",
+    "jsx-ast-utils": "^1.4.1",
+    "lodash.assign": "^4.2.0",
+    "readline2": "^1.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-plugin-import": "^2.20.2"
+  },
+  "scripts": {
+    "eslint.autoFixOnSave": "true",
+    "lint": "eslint ./src",
+    "test": "echo \"Error: no test specified\" && exit 1"
+    
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mary37510/codejam-virtual-keyboard.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mary37510/codejam-virtual-keyboard/issues"
+  },
+  "homepage": "https://github.com/mary37510/codejam-virtual-keyboard#readme"
+}

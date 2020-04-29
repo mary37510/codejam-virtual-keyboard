@@ -14,6 +14,8 @@ const KEYBOARD = {
     capsLock: false,
   },
 
+  textElements: {},
+
   init() {
     this.elements.main = document.createElement('div');
     this.elements.keysContainer = document.createElement('div');
@@ -29,12 +31,14 @@ const KEYBOARD = {
     this.elements.main.appendChild(this.elements.keysContainer);
     document.body.appendChild(this.elements.main);
 
+
     document.querySelectorAll('.keyboard_textarea').forEach((element) => {
       element.addEventListener('focus', () => {
-        this.open(element.value, (currentValue) => {
-          // eslint-disable-next-line no-param-reassign
-          element.value = currentValue;
-        });
+        this.properties.value = element.value || '';
+        this.eventHandlers.oninput = (currentValue) => {
+          const elementToChange = element;
+          elementToChange.value = currentValue;
+        };
       });
     });
   },
@@ -209,23 +213,17 @@ const KEYBOARD = {
 
   toggleCapsLock() {
     this.properties.capsLock = !this.properties.capsLock;
-    // eslint-disable-next-line no-restricted-syntax
-    for (const key of this.elements.keys) {
+    this.elements.keys.forEach((key) => {
       if (key.childElementCount === 0) {
-        key.textContent = this.properties.capsLock ? (
+        const keyToChange = key;
+        keyToChange.textContent = this.properties.capsLock ? (
           key.textContent.toUpperCase()
         ) : (
           key.textContent.toLowerCase()
         );
       }
-    }
+    });
   },
-
-  open(initialValue, oninput) {
-    this.properties.value = initialValue || '';
-    this.eventHandlers.oninput = oninput;
-  },
-
 };
 
 
